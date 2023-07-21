@@ -1,0 +1,63 @@
+1. Crear un nuevo ambiente virtual
+python3 -m venv <nombre_de_entorno_virtual>
+
+2. Activamos el entorno virtual
+source <ruta_de_entorno_virtual>/bin/activate
+
+3. Obtener la direcion del python que estoy ejecutando
+which python3
+
+3. Obtener la direcion del pip que estoy ejecutando
+which pip3
+
+4. Instalar FastAPI
+pip3 install fastapi
+
+5. Actualizar pip
+python3 -m pip install --upgrade pip
+
+6. Instalar uvicorn
+pip3 install uvicorn
+
+7. Guardamos todas las dependencias de un proyecto en un archivo
+pip3 freeze > requeriments.txt
+
+8. Instalar las dependencias desde un archivo
+pip3 install -r requeriments.txt
+
+9. Ejecuta el servidor por defecto en el puerto 8000, pero NO ejecuta de forma automatica los nuevos cambios en el codigo
+uvicorn main:app
+
+10. Ejecuta el servidor por defecto en el puerto 8000 (SI ejecuta de forma automatica los nuevos cambios en el codigo)
+uvicorn main:app --reload
+
+11. Ejecuta el servidor en un puerto especifico (SI ejecuta de forma automatica los nuevos cambios en el codigo)
+uvicorn main:app --reload --port 5000
+
+12. Ejecuta el servidor en un puerto especifico, y al cual se pueden conectar diferenets dispositivos dentro de nuestra misma red local (SI ejecuta de forma automatica los nuevos cambios en el codigo)
+uvicorn main:app --reload --port 5000 --host 0.0.0.0
+
+13. Intslar packete para autenticacion de usuario
+pip install pyjwt
+---------------------------------DOCKER-------------------------------------
+
+1. Construir el contenedor
+docker-compose build
+
+2. Iniciar el contenedor
+docker-compose up -d
+
+3. Ver el estado del contenedor
+docker-compose ps
+
+4. Ingresar al contenedor
+docker-compose exec <service-name> bash
+
+5. Detener el contenedor
+docker-compose down
+
+6. Salir del contenedor
+exit
+
+7. Forzar a detener un contenedor
+docker-compose kill <service-name>
